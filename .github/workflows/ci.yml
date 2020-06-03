@@ -59,4 +59,4 @@ jobs:
         git add --all
         git commit -a -s -m "Update to Kubernetes v1.18.3"
         git push origin $PR_BRANCH -f
-        $GITHUB_WORKSPACE/bin/hub pull-request -m "Update to Kubernetes v1.18.3"
+        hub pull-request -m "Update to Kubernetes v1.18.3"
