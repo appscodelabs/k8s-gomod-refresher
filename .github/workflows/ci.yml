@@ -42,6 +42,7 @@ jobs:
       shell: bash
       run: |
         curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+        sudo mv bin/hub /usr/local/bin
 
     - name: Create pull request
       env:
@@ -53,6 +54,8 @@ jobs:
         echo $PR_BRANCH
         git checkout -b $PR_BRANCH
         gomod-gen --gomod-json-file=/tmp/go.mod.json
+        go mod tidy
+        go mod vendor
         git add --all
         git commit -a -s -m "Update to Kubernetes v1.18.3"
         git push origin $PR_BRANCH -f
