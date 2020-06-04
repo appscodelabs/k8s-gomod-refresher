@@ -30,7 +30,7 @@ jobs:
 
     - name: Install gomod-gen
       run: |
-        curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.0/gomod-gen-linux-amd64
+        curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.1/gomod-gen-linux-amd64
         chmod +x gomod-gen-linux-amd64
         sudo mv gomod-gen-linux-amd64 /usr/local/bin/gomod-gen
 
@@ -48,19 +48,8 @@ jobs:
       run: |
         ./v1.18.3/update.sh
 
-    # - name: Create pull request
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
-    #   run: |
-    #     git clone https://1gtm:${GITHUB_TOKEN}@github.com/stashed/apimachinery.git repo
-    #     cd repo
-    #     export PR_BRANCH=k8s-gomod-refresher-$(date +%s)
-    #     echo $PR_BRANCH
-    #     git checkout -b $PR_BRANCH
-    #     gomod-gen --gomod-json-file=/tmp/go.mod.json
-    #     go mod tidy
-    #     go mod vendor
-    #     git add --all
-    #     git commit -a -s -m "Update to Kubernetes v1.18.3"
-    #     git push origin $PR_BRANCH -f
-    #     hub pull-request -m "Update to Kubernetes v1.18.3"
+    - name: Create pull request
+      env:
+        GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+      run: |
+        ./refresh-repo.sh repos.txt
