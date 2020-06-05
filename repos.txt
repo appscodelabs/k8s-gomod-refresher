@@ -1,1 +1,32 @@
+github.com/kubedb/apimachinery,make gen fmt
+github.com/kubedb/cli
+github.com/kubedb/elasticsearch
+github.com/kubedb/installer,make gen fmt
+github.com/kubedb/memcached
+github.com/kubedb/mongodb
+github.com/kubedb/mysql
+github.com/kubedb/mysql-replication-mode-detector
+github.com/kubedb/operator
+github.com/kubedb/percona-xtradb
+github.com/kubedb/pg-leader-election
+github.com/kubedb/pgbouncer
+github.com/kubedb/postgres
+github.com/kubedb/proxysql
+github.com/kubedb/redis
+github.com/kubepack/installer,make gen fmt
+github.com/kubepack/kubepack,make gen fmt
+github.com/kubepack/lib-helm
+github.com/kubeshield/identity-server,make gen fmt
+github.com/kubeshield/installer,make gen fmt
+github.com/kubevault/csi-driver
+github.com/kubevault/installer,make gen fmt
+github.com/kubevault/operator,make gen fmt
+github.com/kubevault/unsealer
+github.com/searchlight/grafana-operator,make gen fmt
+github.com/searchlight/installer,make gen fmt
 github.com/stashed/apimachinery,make gen fmt
+github.com/stashed/cli
+github.com/stashed/installer,make gen fmt
+github.com/stashed/stash
+github.com/voyagermesh/installer,make gen fmt
+github.com/voyagermesh/voyager,make gen fmt
