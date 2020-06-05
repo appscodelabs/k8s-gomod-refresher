@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eou pipefail
+# set -eou pipefail
 
 SCRIPT_ROOT=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
@@ -23,24 +23,27 @@ refresh() {
     gomod-gen --desired-gomod="$SCRIPT_ROOT/$K8S_VERSION/go.mod"
     go mod tidy
     go mod vendor
-    [ -z "$2" ] || (echo $2; eval $2)
+    [ -z "$2" ] || (
+        echo "$2"
+        $2 || true
+    )
     git add --all
-    if git diff-index --quiet HEAD --; then
+    if git diff --exit-code -s HEAD; then
         echo "Repository $1 is up-to-date."
-        return 0
+    else
+        git commit -a -s -m "$COMMIT_MSG"
+        # git push origin $PR_BRANCH -f
+        hub pull-request \
+            --push \
+            --labels automerge \
+            --message "$COMMIT_MSG" \
+            --message "Signed-off-by: $(git config --get user.name) <$(git config --get user.email)>"
+        # gh pr create \
+        #     --base master \
+        #     --fill \
+        #     --label automerge \
+        #     --reviewer tamalsaha
     fi
-    git commit -a -s -m "$COMMIT_MSG"
-    # git push origin $PR_BRANCH -f
-    hub pull-request \
-        --push \
-        --labels automerge \
-        --message "$COMMIT_MSG" \
-        --message "Signed-off-by: $(git config --get user.name) <$(git config --get user.email)>"
-    # gh pr create \
-    #     --base master \
-    #     --fill \
-    #     --label automerge \
-    #     --reviewer tamalsaha
     popd
 }
 
@@ -55,9 +58,11 @@ if [ -x $GITHUB_TOKEN ]; then
     exit 1
 fi
 
-while IFS=, read -r repo cmd; do
+# ref: https://linuxize.com/post/how-to-read-a-file-line-by-line-in-bash/#using-file-descriptor
+while IFS=, read -r -u9 repo cmd; do
     if [ -z "$repo" ]; then
         continue
     fi
     refresh "$repo" "$cmd"
-done <$1
+    echo "################################################################################"
+done 9<$1
