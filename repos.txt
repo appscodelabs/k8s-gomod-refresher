@@ -1,1 +1,1 @@
-github.com/stashed/apimachinery
+github.com/stashed/apimachinery,make gen fmt

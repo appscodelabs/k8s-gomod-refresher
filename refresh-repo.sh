@@ -20,6 +20,7 @@ refresh() {
     gomod-gen --desired-gomod="$SCRIPT_ROOT/$K8S_VERSION/go.mod"
     go mod tidy
     go mod vendor
+    [ -z $2 ] || eval $2
     git add --all
     if git diff-index --quiet HEAD --; then
         echo "Repository $1 is up-to-date."
@@ -51,9 +52,9 @@ if [ -x $GITHUB_TOKEN ]; then
     exit 1
 fi
 
-while IFS= read -r reponame; do
-    if [ -z "$reponame" ]; then
+while IFS=, read -r repo cmd; do
+    if [ -z "$repo" ]; then
         continue
     fi
-    refresh "$reponame"
+    refresh "$repo" "$cmd"
 done <$1
