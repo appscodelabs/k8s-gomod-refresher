@@ -10,17 +10,20 @@ GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=gomod-refresher-$(date +%s)
 COMMIT_MSG="Update to Kubernetes $K8S_VERSION"
 
+REPO_ROOT=/tmp/gomod-refresher
+
 refresh() {
     echo "refreshing repository: $1"
-    pushd /tmp
-    rm -rf repo
-    git clone --no-tags --no-recurse-submodules --depth=1 https://${GITHUB_USER}:${GITHUB_TOKEN}@$1.git repo
-    cd repo
+    rm -rf $REPO_ROOT
+    mkdir -p $REPO_ROOT
+    pushd $REPO_ROOT
+    git clone --no-tags --no-recurse-submodules --depth=1 https://${GITHUB_USER}:${GITHUB_TOKEN}@$1.git
+    cd $(ls -b1)
     git checkout -b $PR_BRANCH
     gomod-gen --desired-gomod="$SCRIPT_ROOT/$K8S_VERSION/go.mod"
     go mod tidy
     go mod vendor
-    [ -z $2 ] || eval $2
+    [ -z "$2" ] || (echo $2; eval $2)
     git add --all
     if git diff-index --quiet HEAD --; then
         echo "Repository $1 is up-to-date."

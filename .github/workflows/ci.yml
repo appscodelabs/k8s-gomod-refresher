@@ -48,7 +48,7 @@ jobs:
       run: |
         ./v1.18.3/update.sh
 
-    - name: Create pull request
+    - name: Refresh repositories
       env:
         GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
       run: |
