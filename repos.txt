@@ -1,5 +1,6 @@
 github.com/appscode/guard
 github.com/appscode/kubed
+github.com/appscode/kubedb-enterprise
 github.com/kubedb/apimachinery,make gen fmt
 github.com/kubedb/cli
 github.com/kubedb/elasticsearch
