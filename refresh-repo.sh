@@ -32,7 +32,7 @@ refresh() {
         echo "Repository $1 is up-to-date."
     else
         git commit -a -s -m "$COMMIT_MSG"
-        # git push origin $PR_BRANCH -f
+        # git push -u origin $PR_BRANCH -f
         hub pull-request \
             --push \
             --labels automerge \
