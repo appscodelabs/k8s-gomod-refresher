@@ -60,4 +60,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
       run: |
-        ./refresh-repo.sh r2.txt
+        ./refresh-repo.sh repos.txt
