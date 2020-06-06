@@ -7,7 +7,7 @@ SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 K8S_VERSION=v1.18.3
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
-PR_BRANCH=gomod-refresher-$(date +%s)
+PR_BRANCH=gomod-refresher # -$(date +%s)
 COMMIT_MSG="Update to Kubernetes $K8S_VERSION"
 
 REPO_ROOT=/tmp/gomod-refresher
@@ -32,12 +32,11 @@ refresh() {
         echo "Repository $1 is up-to-date."
     else
         git commit -a -s -m "$COMMIT_MSG"
-        # git push -u origin $PR_BRANCH -f
+        git push -u origin $PR_BRANCH -f
         hub pull-request \
-            --push \
             --labels automerge \
             --message "$COMMIT_MSG" \
-            --message "Signed-off-by: $(git config --get user.name) <$(git config --get user.email)>"
+            --message "Signed-off-by: $(git config --get user.name) <$(git config --get user.email)>" || true
         # gh pr create \
         #     --base master \
         #     --fill \
