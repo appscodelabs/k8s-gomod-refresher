@@ -2,62 +2,60 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
   schedule:
-    - cron:  '0 6 * * *'
+    - cron: "0 6 * * *"
 
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Go 1.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: ^1.14
+        id: go
 
-    - name: Set up Go 1.x
-      uses: actions/setup-go@v2
-      with:
-        go-version: ^1.14
-      id: go
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
+      - name: Install yq
+        run: |
+          curl -fsSL -o yq https://github.com/mikefarah/yq/releases/download/3.3.0/yq_linux_amd64
+          chmod +x yq
+          sudo mv yq /usr/local/bin/yq
 
-    - name: Install yq
-      run: |
-        curl -fsSL -o yq https://github.com/mikefarah/yq/releases/download/3.3.0/yq_linux_amd64
-        chmod +x yq
-        sudo mv yq /usr/local/bin/yq
+      - name: Install Kubernetes CLI
+        run: |
+          curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
+          chmod +x ./kubectl
+          sudo mv ./kubectl /usr/local/bin/kubectl
 
-    - name: Install Kubernetes CLI
-      run: |
-        curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/bin/linux/amd64/kubectl
-        chmod +x ./kubectl
-        sudo mv ./kubectl /usr/local/bin/kubectl
+      - name: Install gomod-gen
+        run: |
+          curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.1/gomod-gen-linux-amd64
+          chmod +x gomod-gen-linux-amd64
+          sudo mv gomod-gen-linux-amd64 /usr/local/bin/gomod-gen
 
-    - name: Install gomod-gen
-      run: |
-        curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.1/gomod-gen-linux-amd64
-        chmod +x gomod-gen-linux-amd64
-        sudo mv gomod-gen-linux-amd64 /usr/local/bin/gomod-gen
+      - name: Prepare git
+        run: |
+          git config --global user.name "1gtm"
+          git config --global user.email "1gtm@appscode.com"
 
-    - name: Prepare git
-      run: |
-        git config --global user.name "1gtm"
-        git config --global user.email "1gtm@appscode.com"
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+          sudo mv bin/hub /usr/local/bin
 
-    - name: Install GitHub CLI
-      run: |
-        curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
-        sudo mv bin/hub /usr/local/bin
+      - name: Update desired go.mod
+        run: |
+          ./v1.18.3/update.sh
 
-    - name: Update desired go.mod
-      run: |
-        ./v1.18.3/update.sh
-
-    - name: Refresh repositories
-      env:
-        GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
-      run: |
-        ./refresh-repo.sh repos.txt
+      - name: Refresh repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+        run: |
+          ./refresh-repo.sh repos.txt
