@@ -8,7 +8,7 @@ K8S_VERSION=v1.18.3
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=gomod-refresher # -$(date +%s)
-COMMIT_MSG="Update to Kubernetes $K8S_VERSION"
+COMMIT_MSG="Update Kubernetes $K8S_VERSION dependencies"
 
 REPO_ROOT=/tmp/gomod-refresher
 
