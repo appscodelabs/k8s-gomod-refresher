@@ -4,7 +4,7 @@
 SCRIPT_ROOT=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
-K8S_VERSION=v1.18.3
+K8S_VERSION=v1.18.9
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=gomod-refresher # -$(date +%s)

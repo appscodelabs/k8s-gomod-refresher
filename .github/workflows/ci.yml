@@ -52,7 +52,7 @@ jobs:
 
       - name: Update desired go.mod
         run: |
-          ./v1.18.3/update.sh
+          ./v1.18.9/update.sh
 
       - name: Refresh repositories
         env:
