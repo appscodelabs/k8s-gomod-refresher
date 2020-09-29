@@ -31,7 +31,11 @@ refresh() {
     if git diff --exit-code -s HEAD; then
         echo "Repository $1 is up-to-date."
     else
-        git commit -a -s -m "$COMMIT_MSG"
+        if [[ "$1" == *"stashed"* ]]; then
+            git commit -a -s -m "$COMMIT_MSG" -m "/cherry-pick"
+        else
+            git commit -a -s -m "$COMMIT_MSG"
+        fi
         git push -u origin $PR_BRANCH -f
         hub pull-request \
             --labels automerge \

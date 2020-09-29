@@ -1,6 +1,8 @@
 github.com/appscode/guard
 github.com/appscode/kubed
 github.com/appscode/kubedb-enterprise
+github.com/appscode/stash-enterprise
+github.com/bytebuilders/resource-model,make gen fmt
 github.com/kubedb/apimachinery,make gen fmt
 github.com/kubedb/cli
 github.com/kubedb/elasticsearch
@@ -16,6 +18,10 @@ github.com/kubedb/pgbouncer
 github.com/kubedb/postgres
 github.com/kubedb/proxysql
 github.com/kubedb/redis
+github.com/kubedb/tests
+github.com/kubeform/installer,make gen fmt
+github.com/kubeform/kfc
+github.com/kubeform/kubeform,make gen fmt
 github.com/kubepack/installer,make gen fmt
 github.com/kubepack/kubepack,make gen fmt
 github.com/kubepack/lib-helm
@@ -31,5 +37,13 @@ github.com/stashed/apimachinery,make gen fmt
 github.com/stashed/cli
 github.com/stashed/installer,make gen fmt
 github.com/stashed/stash
+github.com/stashed/cluster
+github.com/stashed/elasticsearch,make gen fmt
+github.com/stashed/mariadb,make gen fmt
+github.com/stashed/mongodb,make gen fmt
+github.com/stashed/mysql,make gen fmt
+github.com/stashed/percona-xtradb,make gen fmt
+github.com/stashed/postgres,make gen fmt
+github.com/stashed/redis,make gen fmt
 github.com/voyagermesh/installer,make gen fmt
 github.com/voyagermesh/voyager,make gen fmt
