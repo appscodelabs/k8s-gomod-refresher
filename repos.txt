@@ -25,6 +25,7 @@ github.com/kubeform/kubeform,make gen fmt
 github.com/kubepack/installer,make gen fmt
 github.com/kubepack/kubepack,make gen fmt
 github.com/kubepack/lib-helm
+github.com/kubeshield/auditor,make gen fmt
 github.com/kubeshield/identity-server,make gen fmt
 github.com/kubeshield/installer,make gen fmt
 github.com/kubevault/csi-driver
@@ -35,15 +36,15 @@ github.com/searchlight/grafana-operator,make gen fmt
 github.com/searchlight/installer,make gen fmt
 github.com/stashed/apimachinery,make gen fmt
 github.com/stashed/cli
-github.com/stashed/installer,make gen fmt
-github.com/stashed/stash
 github.com/stashed/cluster
 github.com/stashed/elasticsearch,make gen fmt
+github.com/stashed/installer,make gen fmt
 github.com/stashed/mariadb,make gen fmt
 github.com/stashed/mongodb,make gen fmt
 github.com/stashed/mysql,make gen fmt
 github.com/stashed/percona-xtradb,make gen fmt
 github.com/stashed/postgres,make gen fmt
 github.com/stashed/redis,make gen fmt
+github.com/stashed/stash
 github.com/voyagermesh/installer,make gen fmt
 github.com/voyagermesh/voyager,make gen fmt

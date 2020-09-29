@@ -1,5 +1,5 @@
 #!/bin/bash
-# set -eou pipefail
+# set -xeou pipefail
 
 SCRIPT_ROOT=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
@@ -11,6 +11,15 @@ PR_BRANCH=gomod-refresher # -$(date +%s)
 COMMIT_MSG="Update Kubernetes $K8S_VERSION dependencies"
 
 REPO_ROOT=/tmp/gomod-refresher
+
+repo_uptodate() {
+    gomodfiles=(go.mod go.sum vendor/modules.txt)
+    changed=($(git diff --name-only))
+    changed+=("${gomodfiles[@]}")
+    # https://stackoverflow.com/a/28161520
+    diff=($(echo ${changed[@]} ${gomodfiles[@]} | tr ' ' '\n' | sort | uniq -u))
+    return ${#diff[@]}
+}
 
 refresh() {
     echo "refreshing repository: $1"
@@ -27,10 +36,10 @@ refresh() {
         echo "$2"
         $2 || true
     )
-    git add --all
-    if git diff --exit-code -s HEAD; then
+    if repo_uptodate; then
         echo "Repository $1 is up-to-date."
     else
+        git add --all
         if [[ "$1" == *"stashed"* ]]; then
             git commit -a -s -m "$COMMIT_MSG" -m "/cherry-pick"
         else
