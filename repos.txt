@@ -28,6 +28,7 @@ github.com/kubepack/lib-helm
 github.com/kubeshield/auditor,make gen fmt
 github.com/kubeshield/identity-server,make gen fmt
 github.com/kubeshield/installer,make gen fmt
+github.com/kubevault/cli
 github.com/kubevault/csi-driver
 github.com/kubevault/installer,make gen fmt
 github.com/kubevault/operator,make gen fmt
