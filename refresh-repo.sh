@@ -13,7 +13,8 @@ COMMIT_MSG="Update Kubernetes $K8S_VERSION dependencies"
 REPO_ROOT=/tmp/gomod-refresher
 
 repo_uptodate() {
-    gomodfiles=(go.mod go.sum vendor/modules.txt)
+    # gomodfiles=(go.mod go.sum vendor/modules.txt)
+    gomodfiles=(go.sum vendor/modules.txt)
     changed=($(git diff --name-only))
     changed+=("${gomodfiles[@]}")
     # https://stackoverflow.com/a/28161520
