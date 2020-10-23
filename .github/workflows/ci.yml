@@ -36,7 +36,7 @@ jobs:
 
       - name: Install gomod-gen
         run: |
-          curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.4/gomod-gen-linux-amd64
+          curl -fsSL -O https://github.com/appscodelabs/gomod-gen/releases/download/v0.1.5/gomod-gen-linux-amd64
           chmod +x gomod-gen-linux-amd64
           sudo mv gomod-gen-linux-amd64 /usr/local/bin/gomod-gen
 
