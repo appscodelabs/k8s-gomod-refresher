@@ -36,6 +36,8 @@ refresh() {
     [ -z "$2" ] || (
         echo "$2"
         $2 || true
+        # run an extra make fmt because when make gen fails, make fmt is not run
+        make fmt || true
     )
     if repo_uptodate; then
         echo "Repository $1 is up-to-date."
