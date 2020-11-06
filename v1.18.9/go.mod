@@ -14,15 +14,15 @@ require (
 	k8s.io/kube-aggregator v0.18.9
 	k8s.io/kubectl v0.18.9
 	k8s.io/kubernetes v1.18.9
-	kmodules.xyz/client-go v0.0.0-20200922200830-63d86b6e5b63
+	kmodules.xyz/client-go v0.0.0-20201105071625-0b277310b9b8
 	kmodules.xyz/crd-schema-fuzz v0.0.0-20200922204806-c1426cd7fcf4
-	kmodules.xyz/custom-resources v0.0.0-20200922210108-70f2815a43bb
-	kmodules.xyz/monitoring-agent-api v0.0.0-20200922204510-b8b5610e5385
-	kmodules.xyz/objectstore-api v0.0.0-20200922210707-59bab27e5d41
-	kmodules.xyz/offshoot-api v0.0.0-20200922211229-36acc531abab
-	kmodules.xyz/openshift v0.0.0-20200922211657-1ece16d36c18
-	kmodules.xyz/prober v0.0.0-20200922212142-743a6514664e
-	kmodules.xyz/webhook-runtime v0.0.0-20200922211931-8337935590de
+	kmodules.xyz/custom-resources v0.0.0-20201105075444-3c6af51b4f79
+	kmodules.xyz/monitoring-agent-api v0.0.0-20201105074044-be7a1044891a
+	kmodules.xyz/objectstore-api v0.0.0-20201105133858-cbb2af88d50a
+	kmodules.xyz/offshoot-api v0.0.0-20201105074700-8675f5f686f2
+	kmodules.xyz/openshift v0.0.0-20201105073146-0da509a7d39f
+	kmodules.xyz/prober v0.0.0-20201105074402-a243b3a27fd8
+	kmodules.xyz/webhook-runtime v0.0.0-20201105073856-2dc7382b88c6
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
@@ -54,6 +54,26 @@ replace github.com/Azure/go-autorest/autorest/validation => github.com/Azure/go-
 replace github.com/Azure/go-autorest/logger => github.com/Azure/go-autorest/logger v0.1.0
 
 replace github.com/Azure/go-autorest/tracing => github.com/Azure/go-autorest/tracing v0.5.0
+
+replace github.com/go-openapi/analysis => github.com/go-openapi/analysis v0.19.5
+
+replace github.com/go-openapi/errors => github.com/go-openapi/errors v0.19.2
+
+replace github.com/go-openapi/jsonpointer => github.com/go-openapi/jsonpointer v0.19.3
+
+replace github.com/go-openapi/jsonreference => github.com/go-openapi/jsonreference v0.19.3
+
+replace github.com/go-openapi/loads => github.com/go-openapi/loads v0.19.4
+
+replace github.com/go-openapi/runtime => github.com/go-openapi/runtime v0.19.4
+
+replace github.com/go-openapi/spec => github.com/go-openapi/spec v0.19.3
+
+replace github.com/go-openapi/strfmt => github.com/go-openapi/strfmt v0.19.3
+
+replace github.com/go-openapi/swag => github.com/go-openapi/swag v0.19.5
+
+replace github.com/go-openapi/validate => github.com/go-openapi/validate v0.19.5
 
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.1
 
