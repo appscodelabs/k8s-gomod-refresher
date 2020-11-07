@@ -1,6 +1,8 @@
 package main
 
 import (
+	_ "go.bytebuilders.dev/license-verifier"
+	_ "go.bytebuilders.dev/license-verifier/kubernetes"
 	_ "k8s.io/api"
 	_ "k8s.io/apiextensions-apiserver"
 	_ "k8s.io/apimachinery/pkg/util/errors"

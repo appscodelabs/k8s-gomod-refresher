@@ -3,7 +3,8 @@ module github.com/appscodelabs/k8s-gomod-refresher/v1.18.9
 go 1.14
 
 require (
-	golang.org/x/net v0.0.0-20200625001655-4c5254603344 // indirect
+	go.bytebuilders.dev/license-verifier v0.5.0
+	go.bytebuilders.dev/license-verifier/kubernetes v0.5.0
 	k8s.io/api v0.18.9
 	k8s.io/apiextensions-apiserver v0.18.9
 	k8s.io/apimachinery v0.18.9
