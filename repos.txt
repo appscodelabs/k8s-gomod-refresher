@@ -10,7 +10,7 @@ github.com/kubedb/installer,make gen fmt
 github.com/kubedb/memcached
 github.com/kubedb/mongodb
 github.com/kubedb/mysql
-github.com/kubedb/mysql-replication-mode-detector
+github.com/kubedb/replication-mode-detector
 github.com/kubedb/operator
 github.com/kubedb/percona-xtradb
 github.com/kubedb/pg-leader-election
