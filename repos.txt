@@ -7,6 +7,7 @@ github.com/kubedb/apimachinery,make gen fmt
 github.com/kubedb/cli
 github.com/kubedb/elasticsearch
 github.com/kubedb/installer,make gen fmt
+github.com/kubedb/mariadb
 github.com/kubedb/memcached
 github.com/kubedb/mongodb
 github.com/kubedb/mysql
