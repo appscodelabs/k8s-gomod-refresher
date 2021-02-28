@@ -2,7 +2,29 @@ github.com/appscode/guard
 github.com/appscode/kubed
 github.com/appscode/kubedb-enterprise
 github.com/appscode/stash-enterprise
+github.com/bytebuilders/client-go
+github.com/bytebuilders/installer,make gen fmt
 github.com/bytebuilders/resource-model,make gen fmt
+github.com/bytebuilders/ui-wizards,make gen fmt
+github.com/kmodules/auditor,make gen fmt
+github.com/kmodules/cert-manager-util
+github.com/kmodules/client-go
+github.com/kmodules/codespan-schema-checker
+github.com/kmodules/crd-importer
+github.com/kmodules/crd-schema-fuzz
+github.com/kmodules/custom-resources,make gen fmt
+github.com/kmodules/installer,make gen fmt
+github.com/kmodules/kustomizer
+github.com/kmodules/monitoring-agent-api,make gen fmt
+github.com/kmodules/objectstore-api,make gen fmt
+github.com/kmodules/offshoot-api,make gen fmt
+github.com/kmodules/openshift,make gen fmt
+github.com/kmodules/prober,make gen fmt
+github.com/kmodules/resource-metadata,make gen fmt
+github.com/kmodules/resource-validator
+github.com/kmodules/schema-checker
+github.com/kmodules/security-policy-api,make gen fmt
+github.com/kmodules/webhook-runtime,make gen fmt
 github.com/kubedb/apimachinery,make gen fmt
 github.com/kubedb/cli
 github.com/kubedb/elasticsearch
@@ -11,7 +33,6 @@ github.com/kubedb/mariadb
 github.com/kubedb/memcached
 github.com/kubedb/mongodb
 github.com/kubedb/mysql
-github.com/kubedb/replication-mode-detector
 github.com/kubedb/operator
 github.com/kubedb/percona-xtradb
 github.com/kubedb/pg-leader-election
@@ -19,13 +40,16 @@ github.com/kubedb/pgbouncer
 github.com/kubedb/postgres
 github.com/kubedb/proxysql
 github.com/kubedb/redis
+github.com/kubedb/replication-mode-detector
 github.com/kubedb/tests
 github.com/kubeform/installer,make gen fmt
 github.com/kubeform/kfc
 github.com/kubeform/kubeform,make gen fmt
+github.com/kubepack/chart-doc-gen
 github.com/kubepack/installer,make gen fmt
 github.com/kubepack/kubepack,make gen fmt
 github.com/kubepack/lib-helm
+github.com/kubepack/lib-app,make gen fmt
 github.com/kubeshield/auditor,make gen fmt
 github.com/kubeshield/identity-server,make gen fmt
 github.com/kubeshield/installer,make gen fmt
