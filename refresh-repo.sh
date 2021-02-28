@@ -4,7 +4,7 @@
 SCRIPT_ROOT=$(realpath $(dirname "${BASH_SOURCE[0]}"))
 SCRIPT_NAME=$(basename "${BASH_SOURCE[0]}")
 
-K8S_VERSION=v1.18.9
+K8S_VERSION=v1.20.4
 
 GITHUB_USER=${GITHUB_USER:-1gtm}
 PR_BRANCH=gomod-refresher # -$(date +%s)
@@ -30,6 +30,7 @@ refresh() {
     git clone --no-tags --no-recurse-submodules --depth=1 https://${GITHUB_USER}:${GITHUB_TOKEN}@$1.git
     cd $(ls -b1)
     git checkout -b $PR_BRANCH
+    sed -i 's|appscode/gengo:release-1.18|appscode/gengo:release-1.20|g' Makefile
     gomod-gen --desired-gomod="$SCRIPT_ROOT/$K8S_VERSION/go.mod"
     go mod tidy
     go mod vendor

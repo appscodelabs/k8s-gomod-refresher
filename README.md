@@ -3,5 +3,5 @@
 ## Generate / Update go.mod
 
 ```console
-./v1.18.9/update.sh
+./v1.20.4/update.sh
 ```
