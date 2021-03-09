@@ -16,15 +16,15 @@ require (
 	k8s.io/kube-aggregator v0.18.9
 	k8s.io/kubectl v0.18.9
 	k8s.io/kubernetes v1.18.9
-	kmodules.xyz/client-go v0.0.0-20210213000708-f480974ce46d
+	kmodules.xyz/client-go v0.0.0-20210220080427-fd7308e30bb4
 	kmodules.xyz/crd-schema-fuzz v0.0.0-20200922204806-c1426cd7fcf4
-	kmodules.xyz/custom-resources v0.0.0-20201124062543-bd8d35c21b0c
+	kmodules.xyz/custom-resources v0.0.0-20210222235834-b3f8dc56b6a3
 	kmodules.xyz/monitoring-agent-api v0.0.0-20201105074044-be7a1044891a
-	kmodules.xyz/objectstore-api v0.0.0-20201105133858-cbb2af88d50a
-	kmodules.xyz/offshoot-api v0.0.0-20201105074700-8675f5f686f2
-	kmodules.xyz/openshift v0.0.0-20201105073146-0da509a7d39f
-	kmodules.xyz/prober v0.0.0-20201105074402-a243b3a27fd8
-	kmodules.xyz/webhook-runtime v0.0.0-20201105073856-2dc7382b88c6
+	kmodules.xyz/objectstore-api v0.0.0-20210220080829-026d708cd259
+	kmodules.xyz/offshoot-api v0.0.0-20210308072215-581e7685cd02
+	kmodules.xyz/openshift v0.0.0-20210220080857-5f0c2b113f42
+	kmodules.xyz/prober v0.0.0-20210220081020-e3067cdcc914
+	kmodules.xyz/webhook-runtime v0.0.0-20210220081624-75da115ae653
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
@@ -75,7 +75,7 @@ replace github.com/go-openapi/strfmt => github.com/go-openapi/strfmt v0.19.3
 
 replace github.com/go-openapi/swag => github.com/go-openapi/swag v0.19.5
 
-replace github.com/go-openapi/validate => github.com/go-openapi/validate v0.19.5
+replace github.com/go-openapi/validate => github.com/gomodules/validate v0.19.5-1.16
 
 replace github.com/gogo/protobuf => github.com/gogo/protobuf v1.3.1
 
