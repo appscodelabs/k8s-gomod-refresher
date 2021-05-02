@@ -1,1 +1,0 @@
-github.com/kubeshield/installer,make gen fmt
