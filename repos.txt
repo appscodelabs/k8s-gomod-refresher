@@ -1,5 +1,3 @@
-github.com/appscode/guard
-github.com/appscode/kubed
 github.com/appscode/kubedb-enterprise
 github.com/appscode/stash-enterprise
 github.com/bytebuilders/client-go
@@ -45,11 +43,16 @@ github.com/kubedb/tests
 github.com/kubeform/installer,make gen fmt
 github.com/kubeform/kfc
 github.com/kubeform/kubeform,make gen fmt
+github.com/kubeguard/guard
+github.com/kubeops-tools/auditor
+github.com/kubeops-tools/auditor-installer
+github.com/kubeops-tools/kubed
+github.com/kubeops-tools/panopticon
 github.com/kubepack/chart-doc-gen
 github.com/kubepack/installer,make gen fmt
 github.com/kubepack/kubepack,make gen fmt
-github.com/kubepack/lib-helm
 github.com/kubepack/lib-app,make gen fmt
+github.com/kubepack/lib-helm
 github.com/kubeshield/auditor,make gen fmt
 github.com/kubeshield/identity-server,make gen fmt
 github.com/kubeshield/installer,make gen fmt
