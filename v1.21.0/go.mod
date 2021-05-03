@@ -16,15 +16,15 @@ require (
 	k8s.io/kube-aggregator v0.21.0
 	k8s.io/kubectl v0.21.0
 	k8s.io/kubernetes v1.21.0
-	kmodules.xyz/client-go v0.0.0-20210429233600-944c5ec810d6
-	kmodules.xyz/crd-schema-fuzz v0.0.0-20210427142518-307383b79acb
-	kmodules.xyz/custom-resources v0.0.0-20210427204948-b63e86e6b5f6
-	kmodules.xyz/monitoring-agent-api v0.0.0-20210427061035-3f0ad110ef03
-	kmodules.xyz/objectstore-api v0.0.0-20210427073544-4d4b3fd133fe
-	kmodules.xyz/offshoot-api v0.0.0-20210427074508-992086875c1e
-	kmodules.xyz/openshift v0.0.0-20210427090503-74b639d9fc30
-	kmodules.xyz/prober v0.0.0-20210427091238-7208ea3e0584
-	kmodules.xyz/webhook-runtime v0.0.0-20210427104229-ea46f3f21bbc
+	kmodules.xyz/client-go v0.0.0-20210502215034-b73197efff3f
+	kmodules.xyz/crd-schema-fuzz v0.0.0-20210503010137-7a9466ed654d
+	kmodules.xyz/custom-resources v0.0.0-20210502220303-115fa584b8d1
+	kmodules.xyz/monitoring-agent-api v0.0.0-20210503020053-730829ef4ddb
+	kmodules.xyz/objectstore-api v0.0.0-20210502215550-f5d0292dff17
+	kmodules.xyz/offshoot-api v0.0.0-20210502215616-234104e66819
+	kmodules.xyz/openshift v0.0.0-20210502215728-d1a9afb41893
+	kmodules.xyz/prober v0.0.0-20210502215750-20bdd29d9c85
+	kmodules.xyz/webhook-runtime v0.0.0-20210502220538-4afeb79dbc7e
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
@@ -62,6 +62,10 @@ replace github.com/Azure/go-autorest/autorest/validation => github.com/Azure/go-
 replace github.com/Azure/go-autorest/logger => github.com/Azure/go-autorest/logger v0.2.0
 
 replace github.com/Azure/go-autorest/tracing => github.com/Azure/go-autorest/tracing v0.6.0
+
+replace github.com/docker/distribution => github.com/docker/distribution v0.0.0-20191216044856-a8371794149d
+
+replace github.com/docker/docker => github.com/moby/moby v17.12.0-ce-rc1.0.20200618181300-9dc6525e6118+incompatible
 
 replace github.com/go-openapi/analysis => github.com/go-openapi/analysis v0.19.5
 
