@@ -16,15 +16,16 @@ require (
 	k8s.io/kube-aggregator v0.21.0
 	k8s.io/kubectl v0.21.0
 	k8s.io/kubernetes v1.21.0
-	kmodules.xyz/client-go v0.0.0-20210502215034-b73197efff3f
-	kmodules.xyz/crd-schema-fuzz v0.0.0-20210503010137-7a9466ed654d
-	kmodules.xyz/custom-resources v0.0.0-20210502220303-115fa584b8d1
-	kmodules.xyz/monitoring-agent-api v0.0.0-20210503020053-730829ef4ddb
-	kmodules.xyz/objectstore-api v0.0.0-20210502215550-f5d0292dff17
-	kmodules.xyz/offshoot-api v0.0.0-20210502215616-234104e66819
-	kmodules.xyz/openshift v0.0.0-20210502215728-d1a9afb41893
-	kmodules.xyz/prober v0.0.0-20210502215750-20bdd29d9c85
-	kmodules.xyz/webhook-runtime v0.0.0-20210502220538-4afeb79dbc7e
+	k8s.io/utils v0.0.0-20210111153108-fddb29f9d009 // indirect
+	kmodules.xyz/client-go v0.0.0-20210503064222-c8c59295a3a5
+	kmodules.xyz/crd-schema-fuzz v0.0.0-20210503192455-da44af375c4c
+	kmodules.xyz/custom-resources v0.0.0-20210503065135-5267be335cb4
+	kmodules.xyz/monitoring-agent-api v0.0.0-20210503064631-e2d5686a9acd
+	kmodules.xyz/objectstore-api v0.0.0-20210503064721-4fadb098d198
+	kmodules.xyz/offshoot-api v0.0.0-20210503065102-3250bbdedc8f
+	kmodules.xyz/openshift v0.0.0-20210503064748-50cdbee251d7
+	kmodules.xyz/prober v0.0.0-20210503064856-dbee486876b6
+	kmodules.xyz/webhook-runtime v0.0.0-20210503065550-dc37e69fdba2
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
@@ -111,7 +112,7 @@ replace google.golang.org/genproto => google.golang.org/genproto v0.0.0-20201110
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.27.1
 
-replace helm.sh/helm/v3 => github.com/kubepack/helm/v3 v3.1.0-rc.1.0.20210427034123-21364f60dbb1
+replace helm.sh/helm/v3 => github.com/kubepack/helm/v3 v3.1.0-rc.1.0.20210503022716-7e2d4913a125
 
 replace k8s.io/api => k8s.io/api v0.21.0
 

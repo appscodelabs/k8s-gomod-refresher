@@ -14,18 +14,21 @@ require (
 	k8s.io/cloud-provider v0.21.0
 	k8s.io/component-base v0.21.0
 	k8s.io/kube-aggregator v0.21.0
-	k8s.io/kubernetes v1.21.0
+	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
 	k8s.io/kubectl v0.21.0
-	kmodules.xyz/constants 2c304bfda278c8cec60c19412450af08394d5b52
+	k8s.io/kubernetes v1.21.0
+	k8s.io/utils v0.0.0-20201110183641-67b214c5f920
 	kmodules.xyz/client-go kubernetes-1.21.0
-	kmodules.xyz/monitoring-agent-api kubernetes-1.21.0
+	kmodules.xyz/constants 2c304bfda278c8cec60c19412450af08394d5b52
+	kmodules.xyz/crd-schema-fuzz kubernetes-1.21.0
 	kmodules.xyz/custom-resources kubernetes-1.21.0
+	kmodules.xyz/monitoring-agent-api kubernetes-1.21.0
 	kmodules.xyz/objectstore-api kubernetes-1.21.0
 	kmodules.xyz/offshoot-api kubernetes-1.21.0
 	kmodules.xyz/openshift kubernetes-1.21.0
-	kmodules.xyz/webhook-runtime kubernetes-1.21.0
-	kmodules.xyz/crd-schema-fuzz kubernetes-1.21.0
 	kmodules.xyz/prober kubernetes-1.21.0
+	kmodules.xyz/webhook-runtime kubernetes-1.21.0
+	stash.appscode.dev/apimachinery v0.13.0-alpha.0
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
