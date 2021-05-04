@@ -3,6 +3,8 @@ package main
 import (
 	_ "go.bytebuilders.dev/license-verifier"
 	_ "go.bytebuilders.dev/license-verifier/kubernetes"
+	_ "gomodules.xyz/runtime"
+	_ "gomodules.xyz/x/os"
 	_ "k8s.io/api"
 	_ "k8s.io/apiextensions-apiserver"
 	_ "k8s.io/apimachinery/pkg/util/errors"
@@ -12,8 +14,10 @@ import (
 	_ "k8s.io/cloud-provider"
 	_ "k8s.io/component-base/version"
 	_ "k8s.io/kube-aggregator"
+	_ "k8s.io/kube-openapi/pkg/common"
 	_ "k8s.io/kubectl/pkg/util"
 	_ "k8s.io/kubernetes/pkg/util/env"
+	_ "k8s.io/utils/io"
 	_ "kmodules.xyz/client-go/core/v1"
 	_ "kmodules.xyz/crd-schema-fuzz"
 	_ "kmodules.xyz/custom-resources/apis/appcatalog"
@@ -23,6 +27,7 @@ import (
 	_ "kmodules.xyz/openshift/apis/apps/v1"
 	_ "kmodules.xyz/prober/api/v1"
 	_ "kmodules.xyz/webhook-runtime/apis/workload/v1"
+
 )
 
 func main() {}

@@ -3,8 +3,10 @@ module github.com/appscodelabs/k8s-gomod-refresher/v1.21.0
 go 1.15
 
 require (
-	go.bytebuilders.dev/license-verifier v0.9.0
-	go.bytebuilders.dev/license-verifier/kubernetes v0.9.0
+	go.bytebuilders.dev/license-verifier v0.9.1
+	go.bytebuilders.dev/license-verifier/kubernetes v0.9.1
+	gomodules.xyz/runtime v0.2.0
+	gomodules.xyz/x v0.0.3
 	k8s.io/api v0.21.0
 	k8s.io/apiextensions-apiserver v0.21.0
 	k8s.io/apimachinery v0.21.0
@@ -14,18 +16,19 @@ require (
 	k8s.io/cloud-provider v0.21.0
 	k8s.io/component-base v0.21.0
 	k8s.io/kube-aggregator v0.21.0
+	k8s.io/kube-openapi v0.0.0-20210305001622-591a79e4bda7
 	k8s.io/kubectl v0.21.0
 	k8s.io/kubernetes v1.21.0
-	k8s.io/utils v0.0.0-20210111153108-fddb29f9d009 // indirect
-	kmodules.xyz/client-go v0.0.0-20210503064222-c8c59295a3a5
+	k8s.io/utils v0.0.0-20210111153108-fddb29f9d009
+	kmodules.xyz/client-go v0.0.0-20210504024435-1eb80721e9b8
 	kmodules.xyz/crd-schema-fuzz v0.0.0-20210503192455-da44af375c4c
-	kmodules.xyz/custom-resources v0.0.0-20210503065135-5267be335cb4
-	kmodules.xyz/monitoring-agent-api v0.0.0-20210503064631-e2d5686a9acd
-	kmodules.xyz/objectstore-api v0.0.0-20210503064721-4fadb098d198
-	kmodules.xyz/offshoot-api v0.0.0-20210503065102-3250bbdedc8f
-	kmodules.xyz/openshift v0.0.0-20210503064748-50cdbee251d7
-	kmodules.xyz/prober v0.0.0-20210503064856-dbee486876b6
-	kmodules.xyz/webhook-runtime v0.0.0-20210503065550-dc37e69fdba2
+	kmodules.xyz/custom-resources v0.0.0-20210504014735-4cd8925c7e05
+	kmodules.xyz/monitoring-agent-api v0.0.0-20210504014332-2b384915c1a3
+	kmodules.xyz/objectstore-api v0.0.0-20210503213845-6d516dbe9abe
+	kmodules.xyz/offshoot-api v0.0.0-20210504013721-d25dcd7cd3f5
+	kmodules.xyz/openshift v0.0.0-20210504013521-0521443bd650
+	kmodules.xyz/prober v0.0.0-20210504013248-51d0726f3d09
+	kmodules.xyz/webhook-runtime v0.0.0-20210504012559-5715c835c6af
 )
 
 replace bitbucket.org/ww/goautoneg => gomodules.xyz/goautoneg v0.0.0-20120707110453-a547fc61f48d
